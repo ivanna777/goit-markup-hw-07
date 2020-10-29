@@ -155,9 +155,23 @@
         content: "";
         width: 16px;
         height: 15px;
-        outline: 1px solid #212121;
+        border: 1px solid #212121;
         border-radius: 2px;
+        background-image: none;
         margin-right: 9px;
+
+        .modal-form-policy:checked + & {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            fill: white;
+            background-image: url(../../checkbox.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $accent-color;
+            border: none;
+          }
+            
     }
 
     &-link {
@@ -166,25 +180,5 @@
     }
 }
 
-.checkbox-svg {
-    position: absolute;
-    top: 1px;
-    left: 0px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    .modal-form-policy:checked + & {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        fill:black;
-        background-color: $accent-color;
-        border: none;
-    }
-}
-    
-.checkbox-span {
-    position: relative;
-}  
+ 
     
