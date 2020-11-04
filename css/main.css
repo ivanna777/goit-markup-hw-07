@@ -41,8 +41,6 @@ img {
 .container {
   width: 1200px;
   padding: 0 15px;
-  padding-right: 15px;
-  padding-left: 15px;
   margin: 0 auto;
 }
 
@@ -126,7 +124,7 @@ img {
 }
 
 .first-label {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 input:focus {
@@ -149,18 +147,18 @@ input:focus + svg {
   transform: translateY(-50%);
 }
 
-.user-phone-span {
-  position: relative;
-}
-
-.form-user-phone-svg {
+.form-user-name-svg-phone-svg {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
 }
 
-.user-mail-span {
+.user-phone-span {
+  position: relative;
+}
+
+.user-phone-span-mail-span {
   position: relative;
 }
 
@@ -237,13 +235,11 @@ input:focus + svg {
   text-align: center;
   letter-spacing: 0.06em;
   color: #FFFFFF;
-  display: flex;
   margin: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: #2196F3;
   border: none;
-  border-radius: 4px;
   padding: 10px 55px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   cursor: pointer;
@@ -453,8 +449,10 @@ input:focus + svg {
   text-transform: uppercase;
   color: #FFFFFF;
   max-width: 700px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
   margin-bottom: 30px;
+  margin-left: auto;
 }
 
 .hero-button {
@@ -496,7 +494,11 @@ input:focus + svg {
   margin-bottom: 95px;
 }
 
-.features-list-item:nth-child(1)::before {
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.antenna::before {
   display: inline-block;
   content: "";
   background-image: url(../svg-adv/antenna.svg);
@@ -508,7 +510,7 @@ input:focus + svg {
   margin-bottom: 55px;
 }
 
-.features-list-item:nth-child(2)::before {
+.clock::before {
   display: inline-block;
   content: "";
   background-image: url(../svg-adv/clock.svg);
@@ -520,7 +522,7 @@ input:focus + svg {
   margin-bottom: 55px;
 }
 
-.features-list-item:nth-child(3)::before {
+.diagram::before {
   display: inline-block;
   content: "";
   background-image: url(../svg-adv/diagram.svg);
@@ -532,7 +534,7 @@ input:focus + svg {
   margin-bottom: 55px;
 }
 
-.features-list-item:nth-child(4)::before {
+.astronaut::before {
   display: inline-block;
   content: "";
   background-image: url(../svg-adv/astronaut.svg);
@@ -542,10 +544,6 @@ input:focus + svg {
   background-position: center;
   background-color: #F5F4FA;
   margin-bottom: 55px;
-}
-
-.features-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .features-item-title {
@@ -592,7 +590,7 @@ input:focus + svg {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1,143;
+  line-height: 1.143;
   text-transform: uppercase;
   color: #FFFFFF;
   position: absolute;

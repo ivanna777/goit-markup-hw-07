@@ -78,14 +78,14 @@
     }
     
     .first-label {
-    margin-top: 0px;
+    margin-top: 0;
     }
    
     input:focus {
        outline: none;
        border-color: $accent-color;
 
-       & + svg {
+        + svg {
            fill: $accent-color; 
     }
 }
@@ -95,32 +95,32 @@
     }
     
     .form-user-name-svg {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    }
-    
-    .user-phone-span {
-        position: relative;   
-    }
-    
-    .form-user-phone-svg {
         position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+
+        &-phone-svg {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+        }
     }
     
-    .user-mail-span {
+.user-phone-span {
+    position: relative;
+    
+    &-mail-span {
         position: relative;   
     }
-    
+}
+      
     .form-user-mail-svg {
         position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
     }
     
     .form-user-comment {
